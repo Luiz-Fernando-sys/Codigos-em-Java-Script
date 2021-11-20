@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" src="programa.js"></script>
+	<meta charset="utf-8">
+   <title>Minha primeira calculadora em JavaScript</title
+</head>
+<body>
+	<form name="calcform" method="post" action="">
+	   <fieldset>
+	      <legend>Devin - Calculadora Simples</legend>
+
+	      <label for="valor1"><font size="4" face="Calibri">Digite o valor</font><strong>1</strong>:</label>
+	      <input type="text" name="valor1" id="valor1" />
+
+	      <label for="valor2"><font size="4" face="Calibri">Digite o valor</font><strong>2</strong>:</label>
+	      <input type="text" name="valor2" id="valor2" />
+
+	      <label for="oper"><font size="4" face="Calibri">Selecione a operação:</font></label>
+	      <select name="oper" id="oper">
+	         <option value="somar">Somar</option>
+	         <option value="subtrair">Subtrair</option>
+	         <option value="multiplicar">Multiplifcar</option>
+	         <option value="dividir">Dividir</option>
+	      </select>
+
+	      <label for="res"><font size="4" face="Calibri">Resultado:</font></label>
+	      <input type="text" name="res" id="res" />
+
+	      <input type="button" value="Calcular" class="botao" onClick="calcular(document.calcform.oper.value)"/>
+	   </fieldset>
+	</form>
+</body>
+</html>
