@@ -1,27 +1,27 @@
-function calcular(oper) {
+function calcular(operacao) {
    const valor1 = parseFloat(document.calcform.valor1.value);
    const valor2 = parseFloat(document.calcform.valor2.value);
-   let result = 0
+   let resultado = 0
 
    if (!valor1 || !valor2) return
 
-   switch (oper) {
+   switch (operacao) {
       case "somar":
-         result = valor1 + valor2;
+         resultado = valor1 + valor2;
          break;
 
       case "subtrair":
-         result = valor1 - valor2;
+         resultado = valor1 - valor2;
          break;
 
       case "multiplicar":
-         result = valor1 * valor2;
+         resultado = valor1 * valor2;
          break;
 
       case "dividir":
-         result = valor1 / valor2;
+         resultado = valor1 / valor2;
          break;
    }
 
-   document.calcform.res.value = result;
+   document.calcform.res.value = resultado;
 }
