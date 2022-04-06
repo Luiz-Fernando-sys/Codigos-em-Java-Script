@@ -1,7 +1,8 @@
 function calcular(oper) {
    const valor1 = parseFloat(document.calcform.valor1.value);
    const valor2 = parseFloat(document.calcform.valor2.value);
-   let result
+   let result = 0
+
    if (!valor1 || !valor2) return
 
    switch (oper) {
