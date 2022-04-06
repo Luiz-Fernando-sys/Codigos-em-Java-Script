@@ -1,20 +1,26 @@
 function calcular(oper) {
-   var valor1 = document.calcform.valor1.value;
-   var valor2 = document.calcform.valor2.value;
+   const valor1 = parseFloat(document.calcform.valor1.value);
+   const valor2 = parseFloat(document.calcform.valor2.value);
 
-   if (oper == "somar") {
-      var res = parseInt(valor1) + parseInt(valor2);
-   } else {
-      if (oper == "subtrair") {
-         var res = valor1-valor2;
-      } else {
-         if (oper == "multiplicar") {
-            var res = valor1*valor2;
-         } else {
-            var res = valor1/valor2;
-         }
-      }
+   if (!valor1 || !valor2) return
+
+   switch (oper) {
+      case "somar":
+         result = valor1 + valor2;
+         break;
+
+      case "subtrair":
+         result = valor1 - valor2;
+         break;
+
+      case "multiplicar":
+         result = valor1 * valor2;
+         break;
+
+      case "dividir":
+         result = valor1 / valor2;
+         break;
    }
 
-   document.calcform.res.value = res;
+   document.calcform.res.value = result;
 }
