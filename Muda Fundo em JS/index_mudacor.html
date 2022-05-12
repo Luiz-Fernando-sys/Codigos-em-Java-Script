@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca cor do fundo</title>
+    <style>
+        body {
+            background-color: rgb(214, 227, 233);
+            color: rgb(61, 53, 53);
+            font: normal 12pt Arial;
+        }
+
+        button {
+            padding: 10px;
+            margin: 4px;
+            border-radius: 15px;
+            border: none;
+            background-color: antiquewhite;
+        }
+
+        #tons_de_azul {
+            background-color: rgb(54, 54, 185);
+            color: bisque;
+        }
+
+        #tons_de_vermelho {
+            background-color: rgb(165, 48, 48);
+            color: bisque;
+        }
+
+        #tons_de_verde {
+            background-color: rgb(12, 128, 12);
+            color: bisque;
+        }        
+    </style>
+</head>
+<body>
+        <h1>Selecione uma cor e o fundo irá mudar</h1>
+        <button id="tons_de_azul">Descubra novos tons de azul</button></br>
+        <button id="tons_de_vermelho">Descubra novos tons de Vermelho</button></br>
+        <button id="tons_de_verde">Descubra novos tons de Verde</button>
+  
+    <script>
+        // Este código irá fazer gerar vários tons da cor azul para o usuário aleatoriamente a cada vez que ele clicar no botão "Troque de Cor"
+
+        // Criação da variável que irá ficar monitorando as ações de clique no único botão que tem na tela.
+        var botao1 = document.getElementById('tons_de_azul')
+        var botao2 = document.getElementById('tons_de_vermelho')
+        var botao3 = document.getElementById('tons_de_verde')
+        //var botao = document.querySelector('button')
+
+        // Função responsável por gerar randômicamente um número novo a partir do número passado como parâmetro, retornando o resultado para servir como parâmetro para gerar o RGB.
+        function random(number){
+            return Math.floor(Math.random()*(number + 1));
+        }
+
+        // Atribuindo a função onclick aqui no próprio JavaScript, uma vez que passamos a monitorar ele através da variável "botao" que criamos.
+        // Assim chamamos a função de forma direta
+        // Esta função muda as cores para tons de azul
+        botao1.onclick = function() {
+            // Criação da variável que é responsável por guardar um valor em RGB
+            var corRandomica = 'rgb(' + random(2) + ',' + random(0) + ',' + random(255) + ')';
+            // Atribuindo a mudança de cor do corpo da página HTML através do comando abaixo, passando a cor armazenada dentro da variável.
+            document.body.style.backgroundColor = corRandomica;
+        }
+        // Esta função muda as cores para tons de Vermelho
+        botao2.onclick = function() {
+            var corRandomica = 'rgb(' + random(255) + ',' + random(0) + ',' + random(2) + ')';
+            document.body.style.backgroundColor = corRandomica;
+        }
+        // Esta função muda as cores para tons de Verde
+        botao3.onclick = function() {
+            var corRandomica = 'rgb(' + random(0) + ',' + random(255) + ',' + random(2) + ')';
+            document.body.style.backgroundColor = corRandomica;
+        }        
+    </script>
+</body>
+</html>
